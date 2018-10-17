@@ -67,10 +67,10 @@
 
 \author{Emanuel Chironi}
 % \altaffiliation[Also at ]{Physics Department, XYZ University.}%Lines break automatically or can be forced with \\
-\author{Federico}%
+\author{Federico Sevlever}%
 \author{Lucas Alonso}
 % \altaffiliation[Also at ]{Physics Department, XYZ University.}%Lines break automatically or can be forced with \\
-\author{Francisco}
+\author{Francisco Correa}
 % \altaffiliation[Also at ]{Physics Department, XYZ University.}%Lines break automatically or can be forced with \\ 
 \email{Second.Author@institution.edu}
 \affiliation{%
@@ -86,7 +86,7 @@ Trabajo Computacional NÂ° 2\\
              %  but any date may be explicitly specified
 
 \begin{abstract}
-La regla de centralidad y letalidad es un ejemplo de relaci\'on entre funcionalidad biol\'ogica y topolog\'ia de redes, la cual ha sido reportada por la literatura especializada. Sin embargo, el origen de tal comportamiento permanece elusivo. Al respecto, se han propuesto distintas hip\'otesis para intentar explicar la regla. En este trabajo se revisan cr\'iticamente dos de esos modelos, a partir de la reconstrucci\'on de los pasos dados por Zotenko y sus colaboradores, en la revisi\'on de ambas hip\'otesis. Para eso se utilizaron cuatro redes de interacci\'on de prote\'inas de la levadura {\sc}. Se testearon ambas hip\'otesis a partir de los datos extra\'idos de las cuatro redes mencionadas y se obtuvieron resultados parcialmente an\'alogos a los reportados por Zotenko y colaboradores. En consecuencia, se concluy\'o que la primera  hip\'otesis analizadas deber\'ia descartarse, pero que la evidencia no era suficiente para descartar la segunda.
+La regla de centralidad y letalidad es un ejemplo de relaci\'on entre funcionalidad biol\'ogica y topolog\'ia de redes, la cual ha sido reportada por la literatura especializada. Sin embargo, el origen de tal comportamiento permanece elusivo. Al respecto, se han propuesto distintas hip\'otesis para intentar explicar la regla. En este trabajo se revisan cr\'iticamente dos de esos modelos, a partir de la reconstrucci\'on de los pasos dados por Zotenko y sus colaboradores, en la revisi\'on de ambas hip\'otesis. Para eso se utilizaron cuatro redes de interacci\'on de prote\'inas de la levadura {\sc}. Se testearon ambas hip\'otesis a partir de los datos extra\'idos de las cuatro redes mencionadas y se obtuvieron resultados parcialmente an\'alogos a los reportados por Zotenko y colaboradores. En consecuencia, se concluy\'o que la primera  hip\'otesis analizada deber\'ia descartarse, pero que la evidencia no era suficiente para descartar la segunda.
 \end{abstract}
 
 %\pacs{Valid PACS appear here}% PACS, the Physics and Astronomy
@@ -99,9 +99,9 @@ La regla de centralidad y letalidad es un ejemplo de relaci\'on entre funcionali
 
 \section{Introducci\'on}
 
-El an\'alisis de la relaci\'on entre las funciones de prote\'inas y otras macromol\'eculas con la estructura topol\'ogica de las redes de interacci\'on en las que est\'an inmersas es un campo importante de estudio en biolog\'ia de sistemas. Un ejemplo del tipo de relaciones que se estudian es la llamada regla de Centralidad y letalidad. Esta regla indica que hay una correlaci\'on positiva entre la esencialidad biol\'ogica de ciertas prote\'inas y la posici\'on que estas ocupan en la red de interacciones. Concretamente, una prote\'ina de alto grado (hub) tiene tres veces m\'as chances de ser esencial que una que no lo es. Esta regla fue postulada por primera vez por Jeong y colaboradores. 
+El an\'alisis de la relaci\'on entre las funciones de prote\'inas y otras macromol\'eculas con la estructura topol\'ogica de las redes de interacci\'on en las que est\'an inmersas, es un campo importante de estudio en biolog\'ia de sistemas. Un ejemplo del tipo de relaciones que se estudian es la llamada Regla de Centralidad y Letalidad. Esta regla indica que hay una correlaci\'on positiva entre la esencialidad biol\'ogica de ciertas prote\'inas y la posici\'on que \'estas ocupan en la red de interacciones. Concretamente, una prote\'ina de alto grado (hub) tiene tres veces m\'as chances de ser esencial que una que no lo es. Esta regla fue postulada por primera vez por Jeong y colaboradores. 
 
-Sin embargo, las razones por las cu\'ales la regla existe son m\'as dif\'iciles de determinar y se han planteado varias hip\'otesis que intentan dar cuenta de ella. Dos hip\'otesis particularmente relevantes fueron las formuladas por el propio Jeong y colaboradores, y tambi\'en por He y colaboradores. La pregunta causal podr\'ia enunciarse como: ¿Qu\'e hace esenciales a las prote\'inas y qu\'e relaci\'on tiene esa esencialidad con el grado que detentan en la red?
+Sin embargo, las razones por las cu\'ales la regla existe son m\'as dif\'iciles de determinar y se han planteado varias hip\'otesis que intentan dar cuenta de ella. Dos hip\'otesis particularmente relevantes fueron las formuladas por el propio Jeong y colaboradores, y tambi\'en por He y colaboradores. La pregunta causal podr\'ia enunciarse como: Â¿Qu\'e hace esenciales a las prote\'inas y qu\'e relaci\'on tiene esa esencialidad con el grado que detentan en la red?
 
 La hip\'otesis de Jeong es b\'asicamente que las prote\'inas son esenciales porque mantienen conectada a la red. Pero dado que la centralidad de grado mide el rol de un nodo en la conectividad de la red, se deduce que las prote\'inas esenciales tender\'an a tener mayor grado.
 
@@ -112,7 +112,7 @@ Ambos grupos aportaron evidencia a favor de sus respectivas explicaciones. En pa
 El objetivo de este trabajo computacional consiste en realizar un an\'alisis cr\'itico de las dos hip\'otesis antes mencionadas, tomando como gu\'ia el trabajo de Zotenko, a fin de evaluar la evidencia a favor y en contra de ambas hip\'otesis. Sin embargo, no entraremos en la explicaci\'on alternativa propuesta por el grupo de Zotenko.
 
 
-\section{Caracter\'i­sticas de las redes analizadas}
+\section{Caracter\'iï¿½sticas de las redes analizadas}
 
 A efectos de reconstruir el an\'alisis hecho por Zotenko consideraremos cuatro redes proteicas: Y2H, LIT, LIT\_Reguly y AP-MS. El uso simult\'aneo de varias redes construidas de manera diferente es relevante para limitar el impacto de sesgos propios del proceso de construcci\'on. Zotenko y colaboradores hacen uso de varias redes porque la literatura anterior hab\'ia sugerido que incluso la regla de centralidad y letalidad pod\'ia ser un efecto espurio. Seg\'un esta postura, la correlaci\'on entre esencialidad y grado pod\'ia deberse al simple hecho de que, dado que las prote\'inas esenciales han sido m\'as estudiadas, conocemos mejor sus interacciones que las de otras prote\'inas. Como resultado de ese mayor conocimiento, es esperable que aparezcan m\'as enlaces de prote\'inas esenciales que de no esenciales, independientemente de la cantidad real de interacciones que las prote\'inas tienen entre s\'i.  
 
@@ -216,7 +216,7 @@ La hip\'otesis de He pretend\'ia explicar la regla de Centralidad-letalidad sin 
 El modelo propuesto es
 
 \begin{equation}
-P_E = 1 -€“ (1-\alpha)^k(1-\beta)
+P_E = 1 -ï¿½ï¿½ (1-\alpha)^k(1-\beta)
 \label{eq1}
 \end{equation}
 
@@ -227,7 +227,7 @@ He estim\'o $\alpha$ y $\beta$ utilizando dos m\'etodos alternativos, cuyos resu
 \includegraphics[width=0.45\textwidth]{figura4b.png}\\
 \includegraphics[width=0.45\textwidth]{figura4c.png}\\
 \includegraphics[width=0.45\textwidth]{figura4d.png}\\
-\caption{Fracci\'on de nodos no esenciales en funci\'on del grado de cada uno de los nodos, visualizado en escala logar\'i­tmica. La recta de color naranja corresponde al ajuste por m\'i­nimos cuadrados empleando la versi\'on linealizada de la ec. \ref{eq1}.}
+\caption{Fracci\'on de nodos no esenciales en funci\'on del grado de cada uno de los nodos, visualizado en escala logar\'iï¿½tmica. La recta de color naranja corresponde al ajuste por m\'iï¿½nimos cuadrados empleando la versi\'on linealizada de la ec. \ref{eq1}.}
 \label{figura4}
 \end{figure}
 
@@ -243,7 +243,7 @@ He estim\'o $\alpha$ y $\beta$ utilizando dos m\'etodos alternativos, cuyos resu
 {\bf Y2H      }&{   0.18 }&{ 0.017}\\
 \end{tabular}
 \end{ruledtabular}
-\caption{Valores de los coeficientes $\alpha$ y $\beta$ obtenidos del ajuste por cuadrados m\'i­nimos, para cada una de las cuatro redes.}
+\caption{Valores de los coeficientes $\alpha$ y $\beta$ obtenidos del ajuste por cuadrados m\'iï¿½nimos, para cada una de las cuatro redes.}
 \label{tabla3}
 \end{table}
 
